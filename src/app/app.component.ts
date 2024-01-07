@@ -29,6 +29,7 @@ export class AppComponent implements OnInit {
   isHoveredVolume: boolean = false;
   showMusicsComponent: boolean = true;
   showBye: boolean = true;
+  showGandzi :  boolean = true;
 
   @ViewChild('volumeInput') volumeInput: any;
   
@@ -137,6 +138,7 @@ export class AppComponent implements OnInit {
   
       this.showMusicsComponent = !this.activatedRoute.snapshot.firstChild?.routeConfig?.path?.includes('anakoko');
       this.showBye = !this.activatedRoute.snapshot.firstChild?.routeConfig?.path?.includes('bye');
+      this.showGandzi = !this.activatedRoute.snapshot.firstChild?.routeConfig?.path?.includes('chemigandzi');
     });
   }
 

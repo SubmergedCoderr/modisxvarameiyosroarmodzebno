@@ -21,6 +21,7 @@ import { MusicsComponent } from './musics/musics.component';
 import { ByeComponent } from './bye/bye.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TreasureComponent } from './treasure/treasure.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     PopIpComponent,
     AnakokoComponent,
     MusicsComponent,
-    ByeComponent
+    ByeComponent,
+    TreasureComponent
   ],
   imports: [
     BrowserModule,

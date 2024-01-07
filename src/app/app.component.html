@@ -5,12 +5,12 @@
       <ul class="nav-ul">
         <li id="index"><a routerLink="/">ელაბორაცია</a></li>
         <li id="books"><a routerLink="/anakoko" id="kak">მოსალოცი</a></li>
-        <li id="about"><a routerLink="/about">საგანძური</a></li>
+        <li id="about"><a routerLink="/chemigandzi">საგანძური</a></li>
         <li id="contact"><a routerLink="/bye" id="contactLink">მშვიდობით</a></li>
       </ul>
     </nav>
 
-    <div *ngIf="showMusicsComponent && showBye" class="main" style="padding: 15px;">
+    <div *ngIf="showMusicsComponent && showBye && showGandzi" class="main" style="padding: 15px;">
       <!-- <app-musics [musicList]="musicList" (musicIndex)="play($event)"></app-musics> -->
       <div style="text-align: center; margin-bottom:5px; margin-top: 30px;">
         <button class="btn btn-primary button-85" (click)="openDialog()">
@@ -84,6 +84,10 @@
     <div *ngIf="!showBye" class="main">
       <app-bye></app-bye>
     </div>
+
+    <div *ngIf="!showGandzi" class="main">
+      <app-treasure></app-treasure>
+    </div>
   </div>
 
   <div class="delicate" [style.background]="currentMusic.gradient">
@@ -107,16 +111,26 @@
       no lyrics, first choose a song
     </p>
 
-    <p *ngIf="currentMusic.title == 'The Meeting Place'" style="text-align: left; padding:0 30px 30px 30px;">
-      ალბათ შენც ხვდები, რომ 11 მარტს ვეღარ გამოვა ჩვენი შეხვედრა, აღარ ვიქნები აქეთ. როგორც ქრისტიანი, ცხადია, ვფიქრობ,
-      რომ ჩვენნვე ვართ ადამიანები
-      ჩვენი ბედის ოსტატები და ჩვენვე ვქმნით მას, შესაბამისად, არ ვფიქრობ რო ბედისწერაა შუაში ასე რომ გამოდის ყველაფერი.
-      რადგანაც ჩემი მიზეზით ცდება 11 მარტი
-      შემიძლია შემოგთავაზო გადადება სხვა თარიღზე ან გადმოდება წასვლამდე, რაც მეეჭვება, ვინაიდან 14-ში დილას მივდივარ და
-      იქამდე ფინალურები, ინტერვიუსთვის მომზადება, ფრენისთვის გამზადება
-      და ბევრი რამეა, თუმცა თუ გენდომება ნახევარი საათით მაინც გამოვნახავ დროს 10-ში ან 13-ში... აი თქვენ თუ კიდე ბედს
-      მიაწერთ ამ ყველაფერს, მაშინ სჯობს არც გადავდოთ, არც გადმოვდოთ.
-    </p>
+    <div *ngIf="currentMusic.title == 'The Meeting Place'"
+      style="  border-radius: 20px; padding:10px 10px; width: 85%;  margin-left: 30px;
+    box-shadow: rgba(48, 44, 44, 0.74) 0px 3px 8px; margin-bottom: 10px; background: radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)">
+
+
+      <p style="text-align: left;">
+        ალბათ შენც ხვდები, რომ 11 მარტს ვეღარ გამოვა ჩვენი შეხვედრა, აღარ ვიქნები აქეთ. როგორც ქრისტიანი, ცხადია,
+        ვფიქრობ,
+        რომ ადამიანები ჩვენვე ვართ
+        ჩვენი ბედის ოსტატები და ჩვენვე ვქმნით მას, შესაბამისად, არ ვფიქრობ რო ბედისწერაა შუაში ასე რომ გამოდის
+        ყველაფერი.
+        რადგანაც ჩემი მიზეზით ცდება 11 მარტი
+        შემიძლია შემოგთავაზო გადადება სხვა თარიღზე ან გადმოდება წასვლამდე, რაც მეეჭვება, ვინაიდან 14-ში დილას მივდივარ
+        და
+        იქამდე ფინალურები, ინტერვიუსთვის მომზადება, ფრენისთვის გამზადება
+        და ბევრი რამეა, თუმცა თუ გენდომება ნახევარი საათით მაინც გამოვნახავ დროს 10-ში ან 13-ში... აი თქვენ თუ კიდე ბედს
+        მიაწერთ ამ ყველაფერს, მაშინ სჯობს დაივიწყოთ შემოთავაზება
+      </p>
+
+    </div>
   </div>
 
 </section>
